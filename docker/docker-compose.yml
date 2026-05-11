@@ -206,6 +206,8 @@ services:
   postgres:
     restart: always
     image: pgvector/pgvector:pg17
+    ports:
+      - "5433:5432"
     volumes:
       - postgres:/var/lib/postgresql/data
     environment:
